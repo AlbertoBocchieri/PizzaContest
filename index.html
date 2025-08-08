@@ -41,6 +41,12 @@ section{padding:5rem 0;position:relative}.section-title{text-align:center;font-s
 .pill{display:inline-block;padding:.25rem .6rem;border-radius:999px;font-size:.75rem;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25)}
 .badge-mine{position:absolute;top:12px;left:12px;background:linear-gradient(135deg,#FFD93D,#FF6B9D);color:#111;padding:.25rem .5rem;border-radius:999px;font-weight:700;box-shadow:0 6px 22px rgba(0,0,0,.25)}
 .gallery-img{border-radius:16px;overflow:hidden}
+/* Pizzaioli */
+.chef-card{text-align:center;transition:var(--transition)}
+.chef-card:hover{transform:translateY(-6px)}
+.chef-img{width:140px;height:140px;border-radius:50%;border:3px solid var(--primary-color);overflow:hidden;margin:0 auto 1rem}
+.chef-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.chef-card:hover .chef-img img{transform:scale(1.06) rotate(1.5deg)}
 #resultsCanvas{width:100%;max-width:900px;height:360px}
 .footer{background:linear-gradient(135deg,rgba(30,60,114,.9) 0,rgba(0,0,0,.9) 100%);padding:3rem 0 2rem;border-top:2px solid rgba(255,217,61,.3)}
 .section-title code{color:#FFD93D}
@@ -76,7 +82,45 @@ section{padding:5rem 0;position:relative}.section-title{text-align:center;font-s
         <a href="#vota" class="btn-hero">Vai al voto</a>
       </div>
     </div>
-  </header>  <section id="vota">
+  </header>  <!-- PIZZAIOLI -->  <section id="pizzaioli">
+    <div class="container">
+      <h2 class="section-title">I pizzaioli</h2>
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="dark-card chef-card h-100">
+            <div class="chef-img"><img src="./img/pizzaioli/mario.jpg" alt="Mario Rossi" loading="lazy"></div>
+            <h5 class="mb-1">Mario Rossi</h5>
+            <small class="text-info">Impasti a lunga maturazione</small>
+            <p class="mt-2 text-light">Appassionato di biga e prefermenti, ama la margherita tradizionale con pomodoro San Marzano.</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="dark-card chef-card h-100">
+            <div class="chef-img"><img src="./img/pizzaioli/giulia.jpg" alt="Giulia Bianchi" loading="lazy"></div>
+            <h5 class="mb-1">Giulia Bianchi</h5>
+            <small class="text-info">Creatività & topping di stagione</small>
+            <p class="mt-2 text-light">Predilige ingredienti locali e verdure grigliate per pizze leggere ma saporite.</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="dark-card chef-card h-100">
+            <div class="chef-img"><img src="./img/pizzaioli/antonio.jpg" alt="Antonio Esposito" loading="lazy"></div>
+            <h5 class="mb-1">Antonio Esposito</h5>
+            <small class="text-info">Tradizione napoletana</small>
+            <p class="mt-2 text-light">Cornicione alto e cottura veloce: equilibrio tra scioglievolezza e croccante.</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="dark-card chef-card h-100">
+            <div class="chef-img"><img src="./img/pizzaioli/sara.jpg" alt="Sara Verdi" loading="lazy"></div>
+            <h5 class="mb-1">Sara Verdi</h5>
+            <small class="text-info">Sperimentazione & farine alternative</small>
+            <p class="mt-2 text-light">Ama mix di grani antichi e idratazioni spinte per impasti super digeribili.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>  <section id="vota">
     <div class="container">
       <h2 class="section-title">I concorrenti</h2>
       <div id="cards" class="row g-4"></div>
