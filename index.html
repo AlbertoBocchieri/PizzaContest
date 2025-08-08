@@ -5,14 +5,14 @@
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
-  <title>Pizza Contest di Ferragosto – Vota la tua preferita!</title>
+  <title>Ferragosto Pizza Contest – Vota la tua preferita!</title>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
   <style>
-/* === STILI COMPLETI (derivati dal tuo foglio) + piccole animazioni extra === */
-:root{--primary-color:#FF4757;--secondary-color:#00D2FF;--accent-color:#FFD93D;--tertiary-color:#2ED8B6;--coral-color:#FF6B9D;--sunset-orange:#FF6348;--ocean-blue:#0984e3;--dark-bg:#1e3c72;--card-bg:rgba(30,60,114,.15);--text-light:#fff;--text-muted:#e6f3ff;--gradient-primary:linear-gradient(135deg,#FF4757 0%,#FFD93D 100%);--gradient-secondary:linear-gradient(135deg,#00D2FF 0%,#2ED8B6 100%);--gradient-sunset:linear-gradient(135deg,#FF6348 0%,#FFD93D 100%);--gradient-ocean:linear-gradient(135deg,#0984e3 0%,#2ED8B6 100%);--gradient-hero:linear-gradient(135deg,rgba(30,60,114,.8) 0%,rgba(0,210,255,.3) 100%);--shadow-primary:0 15px 40px rgba(255,71,87,.4);--shadow-secondary:0 15px 40px rgba(0,210,255,.3);--shadow-card:0 20px 60px rgba(0,0,0,.2);--border-radius:20px;--transition:all .4s cubic-bezier(.4,0,.2,1)}*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+/* === STILI === */
+:root{--primary-color:#FF4757;--secondary-color:#00D2FF;--accent-color:#FFD93D;--tertiary-color:#2ED8B6;--coral-color:#FF6B9D;--sunset-orange:#FF6348;--ocean-blue:#0984e3;--dark-bg:#1e3c72;--card-bg:rgba(30,60,114,.15);--text-light:#fff;--text-muted:#e6f3ff;--gradient-primary:linear-gradient(135deg,#FF4757 0%,#FFD93D 100%);--gradient-secondary:linear-gradient(135deg,#00D2FF 0%,#2ED8B6 100%);--gradient-sunset:linear-gradient(135deg,#FF6348 0%,#FFD93D 100%);--gradient-hero:linear-gradient(135deg,rgba(30,60,114,.8) 0%,rgba(0,210,255,.3) 100%);--shadow-primary:0 15px 40px rgba(255,71,87,.4);--shadow-secondary:0 15px 40px rgba(0,210,255,.3);--shadow-card:0 20px 60px rgba(0,0,0,.2);--border-radius:20px;--transition:all .4s cubic-bezier(.4,0,.2,1)}*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
 body{font-family:Poppins,sans-serif;background:radial-gradient(circle at 20% 80%,rgba(255,217,61,.3) 0,transparent 50%),radial-gradient(circle at 80% 20%,rgba(255,107,157,.3) 0,transparent 50%),radial-gradient(circle at 40% 40%,rgba(0,210,255,.2) 0,transparent 50%),linear-gradient(135deg,#1e3c72 0,#2a5298 25%,#1e3c72 50%,#2a5298 75%,#1e3c72 100%);background-size:400% 400%;animation:gradientShift 15s ease infinite;color:var(--text-light);line-height:1.6;overflow-x:hidden;position:relative}
 @keyframes gradientShift{0%{background-position:0 50%}50%{background-position:100% 50%}100%{background-position:0 50%}}
 .navbar{background:transparent!important;transition:var(--transition);padding:1.2rem 0;z-index:1000;border-bottom:1px solid rgba(255,255,255,.1)}.navbar.scrolled{background:rgba(30,60,114,.95)!important;box-shadow:0 8px 32px rgba(0,210,255,.3);border-bottom:1px solid rgba(0,210,255,.3)}.navbar-brand{font-weight:700;font-size:1.6rem;background:var(--gradient-sunset);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-decoration:none;transition:var(--transition)}.navbar-brand:hover{transform:scale(1.05);filter:drop-shadow(0 0 10px rgba(255,71,87,.5))}.navbar-brand i{margin-right:.5rem;color:var(--secondary-color);animation:bounce 3s infinite}
@@ -21,7 +21,7 @@ body{font-family:Poppins,sans-serif;background:radial-gradient(circle at 20% 80%
 .navbar-nav .nav-link:hover::before{width:100%;opacity:1}
 .navbar-nav .nav-link.btn{background:var(--gradient-sunset)!important;border-radius:30px!important;padding:.8rem 2rem!important;margin-left:1rem!important;box-shadow:var(--shadow-primary);position:relative;overflow:hidden}
 .hero{min-height:100vh;background:var(--gradient-hero);display:flex;align-items:center;position:relative;overflow:hidden}
-.hero::after{content:"";position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1541745537413-b804ba1c88dd?q=80&w=2400&auto=format&fit=crop');opacity:.06;background-size:cover;background-position:center;mix-blend:screen}
+.hero::after{content:"";position:absolute;inset:0;background-image:url('./img/hero.jpg');opacity:.08;background-size:cover;background-position:center;mix-blend:screen}
 .hero-content{position:relative;z-index:2;text-align:center}
 .hero-title{font-size:3.2rem;font-weight:700;margin-bottom:1rem;background:var(--gradient-sunset);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-shadow:0 8px 30px rgba(255,71,87,.5)}
 .hero-subtitle{font-size:1.6rem;font-weight:300;background:var(--gradient-secondary);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:1rem}
@@ -37,11 +37,10 @@ section{padding:5rem 0;position:relative}.section-title{text-align:center;font-s
 .pizza-img{border-radius:16px;overflow:hidden;height:200px;margin-bottom:1rem}
 .pizza-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease;filter:saturate(1.05)}
 .pizza-card:hover .pizza-img img{transform:scale(1.06)}
-.vote-btn{background:var(--gradient-primary);border:none;border-radius:12px;padding:.75rem 1.25rem;color:#fff;font-weight:600;box-shadow:var(--shadow-primary);transition:var(--transition)}
-.vote-btn[disabled]{opacity:.6;filter:grayscale(30%)}
+.vote-btn{background:var(--gradient-primary);border:none;border-radius:12px;padding:.65rem 1.1rem;color:#fff;font-weight:600;box-shadow:var(--shadow-primary);transition:var(--transition)}
+.vote-btn.active{outline:2px solid #FFD93D}
 .pill{display:inline-block;padding:.25rem .6rem;border-radius:999px;font-size:.75rem;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25)}
-#resultsCanvas{width:100%;max-width:900px;height:360px}
-.leader{position:absolute;top:10px;right:10px;background:linear-gradient(135deg,#FFD93D,#FF6B9D);color:#111;padding:.25rem .5rem;border-radius:999px;font-weight:700;box-shadow:0 6px 22px rgba(0,0,0,.25)}
+.badge-mine{position:absolute;top:12px;left:12px;background:linear-gradient(135deg,#FFD93D,#FF6B9D);color:#111;padding:.25rem .5rem;border-radius:999px;font-weight:700;box-shadow:0 6px 22px rgba(0,0,0,.25)}
 .gallery-img{border-radius:16px;overflow:hidden}
 .footer{background:linear-gradient(135deg,rgba(30,60,114,.9) 0,rgba(0,0,0,.9) 100%);padding:3rem 0 2rem;border-top:2px solid rgba(255,217,61,.3)}
 .section-title code{color:#FFD93D}
@@ -59,9 +58,7 @@ section{padding:5rem 0;position:relative}.section-title{text-align:center;font-s
       <div class="collapse navbar-collapse" id="navbarsExample07">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item"><a class="nav-link" href="#vota">Vota</a></li>
-          <li class="nav-item"><a class="nav-link" href="#classifica">Classifica</a></li>
           <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
-          <li class="nav-item"><a class="nav-link btn" href="#info">Info</a></li>
         </ul>
       </div>
     </div>
@@ -70,7 +67,7 @@ section{padding:5rem 0;position:relative}.section-title{text-align:center;font-s
       <div class="hero-content">
         <h1 class="hero-title">Ferragosto Pizza Contest 2025</h1>
         <p class="hero-subtitle">Vota la pizza più buona 🔥🍕</p>
-        <p class="hero-description">Versione con backend Firebase: voto unico per utente (anonimo), classifica live multi‑dispositivo.</p>
+        <p class="hero-description">Voto unico per utente (anonimo), classifica live multi‑dispositivo. Puoi <strong>cambiare voto</strong> in qualsiasi momento.</p>
         <div class="countdown mb-3" id="countdown"></div>
         <div>
           <span class="hero-date"><i class="bi bi-calendar-event"></i> 15 Agosto 2025</span>
@@ -79,15 +76,14 @@ section{padding:5rem 0;position:relative}.section-title{text-align:center;font-s
         <a href="#vota" class="btn-hero">Vai al voto</a>
       </div>
     </div>
-  </header>  <!-- VOTING SECTION -->  <section id="vota">
+  </header>  <!-- VOTING SECTION (unica classifica integrata nelle card) -->  <section id="vota">
     <div class="container">
       <h2 class="section-title">I concorrenti</h2>
-      <div id="cards" class="row g-4"></div><div class="text-center mt-4">
-    <span class="pill" id="votesInfo">Voti totali: 0</span>
-    <span class="pill ms-2" id="deviceInfo">Stato: non autenticato</span>
-  </div>
-
-  <!-- Admin tools (show with ?admin=1) -->
+      <div id="cards" class="row g-4"></div>
+      <div class="text-center mt-4">
+        <span class="pill" id="votesInfo">Voti totali: 0</span>
+        <span class="pill ms-2" id="deviceInfo">Stato: non autenticato</span>
+      </div><!-- Admin tools (show with ?admin=1) -->
   <div id="adminTools" class="dark-card mt-5 d-none">
     <h5 class="mb-3"><i class="bi bi-shield-lock"></i> Pannello Organizzatore</h5>
     <div class="d-flex flex-wrap gap-2">
@@ -96,62 +92,27 @@ section{padding:5rem 0;position:relative}.section-title{text-align:center;font-s
       <button class="btn btn-sm btn-success" id="btnExportCsv">Scarica CSV (tutti i voti)</button>
       <button class="btn btn-sm btn-outline-light" id="btnExportJson">Scarica JSON (tutti i voti)</button>
     </div>
-    <small class="d-block mt-2 text-warning-50">I voti sono salvati su Firestore nella collezione <code>contests/ferragosto2025/votes</code>.</small>
+    <small class="d-block mt-2 text-warning-50">Voti su Firestore: <code>contests/ferragosto2025/votes</code>. Per permettere il <strong>cambio voto</strong> abilita anche <code>update</code> nelle regole.</small>
   </div>
 </div>
 
-  </section>  <!-- RESULTS -->  <section id="classifica">
-    <div class="container">
-      <h2 class="section-title">Classifica live</h2>
-      <div class="dark-card d-flex flex-column align-items-center">
-        <canvas id="resultsCanvas"></canvas>
-        <div class="table-responsive w-100 mt-4">
-          <table class="table table-dark table-striped table-borderless align-middle">
-            <thead><tr><th>#</th><th>Pizza</th><th>Voti</th></tr></thead>
-            <tbody id="resultsTable"></tbody>
-          </table>
-        </div>
-      </div>
-    </div>
   </section>  <!-- GALLERY -->  <section id="gallery">
     <div class="container">
       <h2 class="section-title">Gallery</h2>
       <div id="pizzaCarousel" class="carousel slide dark-card" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img class="d-block w-100 gallery-img" src="https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=2000&auto=format&fit=crop" alt="Pizza 1" loading="lazy">
+            <img class="d-block w-100 gallery-img" src="./img/gallery1.jpg" alt="Pizza 1" loading="lazy">
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100 gallery-img" src="https://images.unsplash.com/photo-1548365328-9f547fb0953f?q=80&w=2000&auto=format&fit=crop" alt="Pizza 2" loading="lazy">
+            <img class="d-block w-100 gallery-img" src="./img/gallery2.jpg" alt="Pizza 2" loading="lazy">
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100 gallery-img" src="https://images.unsplash.com/photo-1528137871618-79d2761e3fd5?q=80&w=2000&auto=format&fit=crop" alt="Pizza 3" loading="lazy">
+            <img class="d-block w-100 gallery-img" src="./img/gallery3.jpg" alt="Pizza 3" loading="lazy">
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#pizzaCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Precedente</span></button>
         <button class="carousel-control-next" type="button" data-bs-target="#pizzaCarousel" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Successiva</span></button>
-      </div>
-    </div>
-  </section>  <!-- INFO/FOOTER -->  <section id="info">
-    <div class="container">
-      <h2 class="section-title">Come funziona</h2>
-      <div class="row g-4">
-        <div class="col-md-6">
-          <div class="dark-card">
-            <h4 class="mb-3"><i class="bi bi-emoji-smile"></i> Regole semplici</h4>
-            <ul class="mb-0">
-              <li>Accesso anonimo automatico via Firebase Auth.</li>
-              <li><strong>Un voto</strong> per utente (vincolato all'UID anonimo).</li>
-              <li>Classifica live sincronizzata tra tutti i device.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="dark-card">
-            <h4 class="mb-3"><i class="bi bi-tools"></i> Personalizzazione rapida</h4>
-            <p>Modifica l'array <code>ENTRIES</code> nel codice per cambiare nomi, foto e descrizioni. Aggiungi quante pizze vuoi.</p>
-          </div>
-        </div>
       </div>
     </div>
   </section>  <footer class="footer">
@@ -160,121 +121,80 @@ section{padding:5rem 0;position:relative}.section-title{text-align:center;font-s
       <small>Versione Firebase, pronta per GitHub Pages.</small>
     </div>
   </footer>  <!-- DEBUG STATUS BANNER (auto-hide) -->  <div id="debugStatus" class="alert alert-danger d-none" role="alert" style="position:fixed;left:50%;transform:translateX(-50%);bottom:16px;z-index:2000;max-width:92vw"></div>  <!-- APP (Firebase + logica) -->  <script type="module">
-  // ====== MIGRAZIONE da localStorage → Firebase ======
-  try { ['pizzaContest_votes_v1','pizzaContest_device_voted_v1'].forEach(k=> localStorage.removeItem(k)); } catch {}
-
-  // ====== ENTRIES ======
+  // ====== ENTRIES (immagini dalla repo ./img/<id>.jpg) ======
   const ENTRIES = [
-    { id: 'margherita', name: 'Margherita Classica', author: 'Team Napoli', img: 'https://images.unsplash.com/photo-1600628421158-c1f3b0c9a7ab?q=80&w=1600&auto=format&fit=crop', desc: 'Pomodoro San Marzano, fiordilatte, basilico fresco.' },
-    { id: 'diavola', name: 'Diavola', author: 'Team Piccante', img: 'https://images.unsplash.com/photo-1541745537413-b804ba1c88dd?q=80&w=1600&auto=format&fit=crop', desc: 'Salame piccante, peperoncino, mozzarella filante.' },
-    { id: 'bufalina', name: 'Bufalina DOP', author: 'Caseificio Lovers', img: 'https://images.unsplash.com/photo-1552539618-7eec9b4d1796?q=80&w=1600&auto=format&fit=crop', desc: 'Mozzarella di bufala, piennolo e basilico.' },
-    { id: 'ortolana', name: 'Ortolana', author: 'Green Squad', img: 'https://images.unsplash.com/photo-1613564834361-9436948817d0?q=80&w=1600&auto=format&fit=crop', desc: 'Verdure grigliate, leggera ma con carattere.' }
+    { id: 'margherita', name: 'Margherita Classica', author: 'Team Napoli', img: './img/margherita.jpg', desc: 'Pomodoro San Marzano, fiordilatte, basilico.' },
+    { id: 'diavola', name: 'Diavola', author: 'Team Piccante', img: './img/diavola.jpg', desc: 'Salame piccante, peperoncino, mozzarella.' },
+    { id: 'bufalina', name: 'Bufalina DOP', author: 'Caseificio Lovers', img: './img/bufalina.jpg', desc: 'Mozzarella di bufala, piennolo, basilico.' },
+    { id: 'ortolana', name: 'Ortolana', author: 'Green Squad', img: './img/ortolana.jpg', desc: 'Verdure grigliate, leggera ma con carattere.' }
   ];
 
-  // ====== Firebase SDK (modular) ======
+  // ====== Firebase SDK ======
   import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js';
   import { getAuth, signInAnonymously, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js';
   import { getAnalytics } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js';
   import { getFirestore, collection, doc, setDoc, getDoc, onSnapshot, serverTimestamp } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js';
 
-  // === CONFIG fornita da te ===
-  const firebaseConfig = {
-    apiKey: "AIzaSyCuPSHBGhypBqboK54Dpi0UlFipBmzbaP0",
-    authDomain: "pizza-contest.firebaseapp.com",
-    databaseURL: "https://pizza-contest-default-rtdb.europe-west1.firebasedatabase.app",
-    projectId: "pizza-contest",
-    storageBucket: "pizza-contest.firebasestorage.app",
-    messagingSenderId: "76144886476",
-    appId: "1:76144886476:web:fd87ceafa108fe4e6cf869",
-    measurementId: "G-Q9FMW6YVBF"
-  };
+  const firebaseConfig = { apiKey:"AIzaSyCuPSHBGhypBqboK54Dpi0UlFipBmzbaP0", authDomain:"pizza-contest.firebaseapp.com", databaseURL:"https://pizza-contest-default-rtdb.europe-west1.firebasedatabase.app", projectId:"pizza-contest", storageBucket:"pizza-contest.firebasestorage.app", messagingSenderId:"76144886476", appId:"1:76144886476:web:fd87ceafa108fe4e6cf869", measurementId:"G-Q9FMW6YVBF" };
 
-  function showStatus(msg, type='danger'){
-    const el = document.getElementById('debugStatus');
-    el.className = `alert alert-${type}`;
-    el.textContent = msg;
-    el.classList.remove('d-none');
-    clearTimeout(window.__stsTo);
-    window.__stsTo = setTimeout(()=> el.classList.add('d-none'), 6000);
-  }
+  function showStatus(msg, type='danger'){ const el = document.getElementById('debugStatus'); el.className = `alert alert-${type}`; el.textContent = msg; el.classList.remove('d-none'); clearTimeout(window.__stsTo); window.__stsTo = setTimeout(()=> el.classList.add('d-none'), 6000); }
 
-  // confetti leggero
-  function confetti(){
-    const el = document.createElement('div');
-    el.style.position='fixed'; el.style.inset='0'; el.style.pointerEvents='none'; el.style.zIndex='3000';
-    document.body.appendChild(el);
-    const c = document.createElement('canvas'); el.appendChild(c);
-    const ctx = c.getContext('2d'); const dpr = window.devicePixelRatio||1;
-    function resize(){ c.width=innerWidth*dpr; c.height=innerHeight*dpr; }
-    resize();
-    const parts = Array.from({length:120},()=>({x:Math.random()*innerWidth,y:-20-Math.random()*200,vy:1+Math.random()*3,vx:-1+Math.random()*2,w:6+Math.random()*6,h:8+Math.random()*10,rot:Math.random()*6}));
-    const cols=['#FF4757','#FFD93D','#2ED8B6','#00D2FF','#FF6B9D'];
-    let t=0; const id = requestAnimationFrame(function loop(){ t++; ctx.clearRect(0,0,c.width,c.height); ctx.save(); ctx.scale(dpr,dpr);
-      parts.forEach(p=>{ p.y+=p.vy; p.x+=p.vx; p.rot+=0.1; ctx.translate(p.x,p.y); ctx.rotate(p.rot); ctx.fillStyle=cols[p.w%cols.length]; ctx.fillRect(-p.w/2,-p.h/2,p.w,p.h); ctx.setTransform(1,0,0,1,0,0); });
-      if(t<240) requestAnimationFrame(loop); else document.body.removeChild(el);
-    });
-    window.addEventListener('resize', resize, {once:true});
-  }
+  // Confetti multicolore (HSL random)
+  function confetti(){ const layer = document.createElement('div'); layer.style.position='fixed'; layer.style.inset='0'; layer.style.pointerEvents='none'; layer.style.zIndex='3000'; document.body.appendChild(layer); const c = document.createElement('canvas'); layer.appendChild(c); const ctx = c.getContext('2d'); const dpr = window.devicePixelRatio||1; const parts = []; function resize(){ c.width=innerWidth*dpr; c.height=innerHeight*dpr; } resize(); const N = 160; for(let i=0;i<N;i++){ parts.push({ x: Math.random()*innerWidth, y: -20-Math.random()*200, vy: 2+Math.random()*4, vx: -1+Math.random()*2, w: 6+Math.random()*8, h: 8+Math.random()*12, rot: Math.random()*6, hue: Math.floor(Math.random()*360)});} let t=0; (function loop(){ t++; ctx.clearRect(0,0,c.width,c.height); ctx.save(); ctx.scale(dpr,dpr); parts.forEach(p=>{ p.y+=p.vy; p.x+=p.vx; p.rot+=0.12; ctx.translate(p.x,p.y); ctx.rotate(p.rot); ctx.fillStyle = `hsl(${p.hue}, 90%, 60%)`; ctx.fillRect(-p.w/2,-p.h/2,p.w,p.h); ctx.setTransform(1,0,0,1,0,0); }); ctx.restore(); if(t<260) requestAnimationFrame(loop); else document.body.removeChild(layer); })(); window.addEventListener('resize', resize, {once:true}); }
 
-  let app, analytics;
-  try { app = initializeApp(firebaseConfig); try { analytics = getAnalytics(app); } catch {} } catch(e){ console.error('Firebase init error', e); showStatus('Errore inizializzazione Firebase: ' + (e?.message||e)); }
+  let app, analytics; try { app = initializeApp(firebaseConfig); try { analytics = getAnalytics(app); } catch {} } catch(e){ console.error('Firebase init error', e); showStatus('Errore init Firebase: ' + (e?.message||e)); }
   const auth = getAuth(app); const db = getFirestore(app);
   const CONTEST_ID = 'ferragosto2025';
   const votesCol = collection(db, `contests/${CONTEST_ID}/votes`);
 
-  let currentUser = null; let votesCache = [];
+  let currentUser = null; let votesCache = []; let myVote = null;
+
   signInAnonymously(auth).catch(e=>{console.error('Auth error', e); showStatus('Auth anonima fallita: ' + (e?.message||e));});
-  onAuthStateChanged(auth, async (user) => { currentUser = user; document.getElementById('deviceInfo').textContent = user ? `Utente: ${user.uid.slice(0,8)}…` : 'Stato: non autenticato'; initAdmin(); subscribeVotes(); renderAll(); });
+  onAuthStateChanged(auth, async (user) => { currentUser = user; document.getElementById('deviceInfo').textContent = user ? `Utente: ${user.uid.slice(0,8)}…` : 'Stato: non autenticato'; await fetchMyVote(); initAdmin(); subscribeVotes(); renderAll(); });
 
-  // ====== COUNTDOWN a Ferragosto (00:00 Europe/Rome) ======
-  const target = new Date('2025-08-15T00:00:00+02:00').getTime();
-  function format2(n){return String(n).padStart(2,'0')}
-  function tick(){ const now = Date.now(); let d = Math.max(0, target-now); const s = Math.floor(d/1000); const days = Math.floor(s/86400); const hrs=Math.floor((s%86400)/3600); const mins=Math.floor((s%3600)/60); const secs=s%60; document.getElementById('countdown').innerHTML = `<div class="cd"><strong>${days}</strong><div>giorni</div></div><div class="cd"><strong>${format2(hrs)}</strong><div>ore</div></div><div class="cd"><strong>${format2(mins)}</strong><div>min</div></div><div class="cd"><strong>${format2(secs)}</strong><div>sec</div></div>`; }
-  setInterval(tick, 1000); tick();
+  async function fetchMyVote(){ if(!currentUser) return; const snap = await getDoc(doc(db, `contests/${CONTEST_ID}/votes/${currentUser.uid}`)); myVote = snap.exists()? (snap.data().entryId || null) : null; }
 
-  // ====== VOTO ======
-  async function hasVoted(){ if (!currentUser) return false; const voteDoc = await getDoc(doc(db, `contests/${CONTEST_ID}/votes/${currentUser.uid}`)); return voteDoc.exists(); }
-  async function registerVote(entryId){ if(!currentUser){ showStatus('Auth in corso, riprova…','warning'); return false; } if(await hasVoted()){ showStatus('Hai già votato.','warning'); return false; } try{ await setDoc(doc(db, `contests/${CONTEST_ID}/votes/${currentUser.uid}`), { entryId, ts: serverTimestamp(), ua: navigator.userAgent }); confetti(); location.hash = '#classifica'; return true; }catch(e){ console.error('Write error', e); showStatus('Scrittura voto fallita: ' + (e?.message||e)); return false; } }
+  // ====== VOTO con possibilità di CAMBIO ======
+  async function vote(entryId){ if(!currentUser){ showStatus('Auth in corso, riprova…','warning'); return; } const changing = myVote && myVote !== entryId; try{ await setDoc(doc(db, `contests/${CONTEST_ID}/votes/${currentUser.uid}`), { entryId, ts: serverTimestamp(), ua: navigator.userAgent }, { merge: true }); myVote = entryId; renderCards(); confetti(); showStatus(changing ? '✅ Voto aggiornato!' : '✅ Voto registrato!', 'success'); }catch(e){ console.error('Write error', e); if(String(e).includes('Missing or insufficient permissions')){ showStatus('Le regole Firestore non consentono UPDATE. Abilita update su /contests/{id}/votes/{uid}.', 'warning'); } else { showStatus('Scrittura voto fallita: ' + (e?.message||e)); } } }
 
   // ====== LIVE SUBSCRIBE ======
   function subscribeVotes(){ onSnapshot(votesCol, (snap) => { votesCache = snap.docs.map(d => ({ id: d.id, ...d.data() })); renderResults(); renderMeta(); }, (e)=>{ console.error(e); showStatus('Errore lettura live: ' + (e?.message||e)); }); }
 
-// ====== RENDER CARDS ======
-function renderCards(){ const wrap = document.getElementById('cards'); wrap.innerHTML='';
-    ENTRIES.forEach(entry => { const col = document.createElement('div'); col.className = 'col-12 col-sm-6 col-lg-3 position-relative'; col.innerHTML = `
+  // ====== RENDER CARDS + CLASSIFICA INLINE ======
+  function tally(){ const counts = Object.fromEntries(ENTRIES.map(e=>[e.id,0])); for(const v of votesCache){ if(v.entryId && counts[v.entryId] !== undefined) counts[v.entryId]++; } const data = ENTRIES.map(e => ({...e, votes: counts[e.id]})); data.sort((a,b)=> b.votes - a.votes || a.name.localeCompare(b.name)); return { counts, data }; }
+
+  function renderCards(){ const wrap = document.getElementById('cards'); const { counts, data } = tally(); wrap.innerHTML=''; data.forEach(entry => { const col = document.createElement('div'); col.className = 'col-12 col-sm-6 col-lg-3 position-relative'; const isMine = myVote === entry.id; col.innerHTML = `
         <div class="dark-card pizza-card h-100">
           <div class="pizza-img"><img src="${entry.img}" alt="${entry.name}" loading="lazy"></div>
+          ${isMine ? '<div class="badge-mine"><i class="bi bi-heart-fill"></i> Il tuo voto</div>' : ''}
           <h5 class="mb-1">${entry.name}</h5>
           <small class="text-info">${entry.author}</small>
           <p class="mt-2 mb-3 text-light">${entry.desc}</p>
           <div class="d-flex align-items-center justify-content-between mt-auto">
-            <button class="vote-btn" data-id="${entry.id}"><i class="bi bi-hand-thumbs-up"></i> Vota</button>
-            <span class="pill"><i class="bi bi-people"></i> <span data-count-id="${entry.id}">0</span></span>
+            <button class="vote-btn ${isMine ? 'active' : ''}" data-id="${entry.id}">${isMine?'<i class="bi bi-arrow-repeat"></i> Cambia voto':'<i class="bi bi-hand-thumbs-up"></i> Vota'}</button>
+            <span class="pill"><i class="bi bi-people"></i> <span>${counts[entry.id]||0}</span></span>
           </div>
         </div>`; wrap.appendChild(col); });
-    wrap.querySelectorAll('.vote-btn').forEach(btn => { btn.addEventListener('click', async () => { btn.disabled = true; const ok = await registerVote(btn.getAttribute('data-id')); if(!ok) btn.disabled = true; }); }); updateVoteButtonsState(); }
-  async function updateVoteButtonsState(){ const voted = await hasVoted(); document.querySelectorAll('.vote-btn').forEach(b => b.disabled = voted); }
+    wrap.querySelectorAll('.vote-btn').forEach(btn => btn.addEventListener('click', async () => vote(btn.getAttribute('data-id')))); }
 
-  // ====== RISULTATI (tabella + grafico + leader badge) ======
-  function tally(){ const counts = Object.fromEntries(ENTRIES.map(e=>[e.id,0])); for(const v of votesCache){ if(v.entryId && counts[v.entryId] !== undefined) counts[v.entryId]++; } const data = ENTRIES.map(e => ({...e, votes: counts[e.id]})); data.sort((a,b)=> b.votes - a.votes || a.name.localeCompare(b.name)); return { counts, data }; }
-  function renderResults(){ const { data } = tally(); const tbody = document.getElementById('resultsTable'); tbody.innerHTML = ''; data.forEach((e,i)=>{ const tr = document.createElement('tr'); tr.innerHTML = `<td>${i+1}</td><td>${e.name}</td><td>${e.votes}</td>`; tbody.appendChild(tr); const countEl = document.querySelector(`[data-count-id="${e.id}"]`); if(countEl) countEl.textContent = e.votes; }); renderChart(data); markLeader(data[0]?.id); }
-  function renderChart(data){ const canvas = document.getElementById('resultsCanvas'); const ctx = canvas.getContext('2d'); const dpr = window.devicePixelRatio || 1; const width = canvas.clientWidth; const height = canvas.clientHeight; canvas.width = width * dpr; canvas.height = height * dpr; ctx.scale(dpr,dpr); ctx.clearRect(0,0,width,height); const m = {l: 120, r: 20, t: 20, b: 40}; const barH = Math.max(24, Math.min(48, (height - m.t - m.b) / Math.max(1, data.length) - 8)); const maxV = Math.max(1, ...data.map(d => d.votes)); const x = v => m.l + (v / maxV) * (width - m.l - m.r); ctx.font = '14px Poppins, sans-serif'; ctx.textBaseline = 'middle'; data.forEach((d,i)=>{ const y = m.t + i * (barH + 12); ctx.fillStyle = '#e6f3ff'; ctx.fillText(d.name, 12, y + barH/2); ctx.fillStyle = 'rgba(255,255,255,.15)'; ctx.fillRect(m.l, y, width - m.l - m.r, barH); const grad = ctx.createLinearGradient(m.l, y, x(d.votes), y); grad.addColorStop(0,'#FF4757'); grad.addColorStop(1,'#FFD93D'); ctx.fillStyle = grad; ctx.fillRect(m.l, y, Math.max(2, x(d.votes)-m.l), barH); ctx.fillStyle = '#fff'; ctx.font = 'bold 14px Poppins, sans-serif'; ctx.fillText(String(d.votes), x(d.votes)+8, y + barH/2); }); }
-  function markLeader(id){ document.querySelectorAll('.leader').forEach(el=>el.remove()); if(!id) return; const card = Array.from(document.querySelectorAll('#cards [data-count-id]')).find(el => el.getAttribute('data-count-id')===id)?.closest('.col-12'); if(!card) return; const badge = document.createElement('div'); badge.className='leader'; badge.innerHTML = '<i class="bi bi-trophy"></i> Leader'; card.appendChild(badge); }
+  function renderResults(){ renderCards(); }
 
   // ====== META ======
   function renderMeta(){ const total = votesCache.length; document.getElementById('votesInfo').textContent = `Voti totali: ${total}`; }
-  function renderAll(){ renderCards(); renderResults(); renderMeta(); window.addEventListener('resize', ()=> renderResults()); }
+  function renderAll(){ renderCards(); renderMeta(); }
 
-  // ====== ADMIN ======
-  function initAdmin(){ const params = new URLSearchParams(location.search); const isAdmin = params.get('admin') === '1'; const box = document.getElementById('adminTools'); if(isAdmin) box.classList.remove('d-none'); const clearBtn = document.getElementById('btnClearLocal'); if (clearBtn) { clearBtn.addEventListener('click', () => { ['pizzaContest_votes_v1','pizzaContest_device_voted_v1'].forEach(k=> localStorage.removeItem(k)); showStatus('Cache locale (vecchia versione) pulita. Ricarica la pagina.', 'success'); }); }
-    const testBtn = document.getElementById('btnTestWrite'); if(testBtn){ testBtn.addEventListener('click', async ()=>{ if(!currentUser){ showStatus('Auth non pronta, riprova…', 'warning'); return; } try{ await setDoc(doc(db, `contests/${CONTEST_ID}/votes/${currentUser.uid}`), { entryId: 'TEST', ts: serverTimestamp(), ua: 'admin-test' }); showStatus('✅ Test write OK. Controlla Firestore.', 'success'); }catch(e){ console.error(e); showStatus('❌ Test write fallita: ' + (e?.message||e)); } }); }
-    document.getElementById('btnExportCsv').addEventListener('click', async ()=> exportVotes('csv')); document.getElementById('btnExportJson').addEventListener('click', async ()=> exportVotes('json')); }
-  async function exportVotes(kind='csv'){ const rows = votesCache.map(v => [v.id, v.entryId || '', (v.ts && v.ts.toDate ? v.ts.toDate().toISOString() : ''), v.ua || '']); if(kind==='json'){ const blob = new Blob([JSON.stringify(rows.map(r=>({uid:r[0], entryId:r[1], ts:r[2], ua:r[3]})), null, 2)], {type:'application/json'}); const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'pizza_votes.json'; a.click(); } else { const csv = [['uid','entryId','timestamp','ua'], ...rows].map(r=>r.map(x=>'"'+String(x).replaceAll('"','""')+'"').join(',')).join('');
-  const blob = new Blob([csv], {type:'text/csv;charset=utf-8;'}); const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'pizza_votes.csv'; a.click(); } }
+// ====== ADMIN ======
+function initAdmin(){ const params = new URLSearchParams(location.search); const isAdmin = params.get('admin') === '1'; const box = document.getElementById('adminTools'); if(isAdmin) box.classList.remove('d-none'); const clearBtn = document.getElementById('btnClearLocal'); if (clearBtn) { clearBtn.addEventListener('click', () => { ['pizzaContest_votes_v1','pizzaContest_device_voted_v1'].forEach(k=> localStorage.removeItem(k)); showStatus('Cache locale (vecchia versione) pulita. Ricarica la pagina.', 'success'); }); } const testBtn = document.getElementById('btnTestWrite'); if(testBtn){ testBtn.addEventListener('click', async ()=>{ if(!currentUser){ showStatus('Auth non pronta, riprova…', 'warning'); return; } try{ await setDoc(doc(db, `contests/${CONTEST_ID}/votes/${currentUser.uid}`), { entryId: 'TEST', ts: serverTimestamp(), ua: 'admin-test' }, { merge: true }); showStatus('✅ Test write OK. Controlla Firestore.', 'success'); }catch(e){ console.error(e); showStatus('❌ Test write fallita: ' + (e?.message||e)); } }); } document.getElementById('btnExportCsv').addEventListener('click', async ()=> exportVotes('csv')); document.getElementById('btnExportJson').addEventListener('click', async ()=> exportVotes('json')); }
 
-  // Navbar effetto
-  window.addEventListener('scroll', () => document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 10));
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+async function exportVotes(kind='csv'){ const rows = votesCache.map(v => [v.id, v.entryId || '', (v.ts && v.ts.toDate ? v.ts.toDate().toISOString() : ''), v.ua || '']); if(kind==='json'){ const blob = new Blob([JSON.stringify(rows.map(r=>({uid:r[0], entryId:r[1], ts:r[2], ua:r[3]})), null, 2)], {type:'application/json'}); const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'pizza_votes.json'; a.click(); } else { const csv = [['uid','entryId','timestamp','ua'], ...rows].map(r=>r.map(x=>'"'+String(x).replaceAll('"','""')+'"').join(',')).join('');
+const blob = new Blob([csv], {type:'text/csv;charset=utf-8;'}); const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'pizza_votes.csv'; a.click(); } }
+
+// Navbar effetto
+window.addEventListener('scroll', () => document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 10));
+
+// COUNTDOWN
+const target = new Date('2025-08-15T00:00:00+02:00').getTime(); function format2(n){return String(n).padStart(2,'0')} function tick(){ const now = Date.now(); let d = Math.max(0, target-now); const s = Math.floor(d/1000); const days = Math.floor(s/86400); const hrs=Math.floor((s%86400)/3600); const mins=Math.floor((s%3600)/60); const secs=s%60; document.getElementById('countdown').innerHTML = `<div class="cd"><strong>${days}</strong><div>giorni</div></div><div class="cd"><strong>${format2(hrs)}</strong><div>ore</div></div><div class="cd"><strong>${format2(mins)}</strong><div>min</div></div><div class="cd"><strong>${format2(secs)}</strong><div>sec</div></div>`; } setInterval(tick, 1000); tick();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-</html>
+</html
