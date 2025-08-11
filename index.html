@@ -108,10 +108,6 @@ section{padding:5rem 0;position:relative}.section-title{text-align:center;font-s
     <div class="container">
       <h2 class="section-title">I concorrenti</h2>
       <div id="cards" class="row g-4"></div>
-      <div class="text-center mt-4">
-        <span class="pill" id="votesInfo">Voti totali: 0</span>
-        <span class="pill ms-2" id="deviceInfo">Stato: non autenticato</span>
-      </div>
       <div id="adminTools" class="dark-card mt-5 d-none">
         <h5 class="mb-3"><i class="bi bi-shield-lock"></i> Pannello Organizzatore</h5>
         <div class="d-flex flex-wrap gap-2">
@@ -219,8 +215,6 @@ section{padding:5rem 0;position:relative}.section-title{text-align:center;font-s
     document.getElementById('deviceInfo').textContent = user ? `Utente: ${user.uid.slice(0,8)}…` : 'Stato: non autenticato';
     await fetchMyVote();
     initAdmin();
-    subscribeVotes();
-    renderAll();
   });
 
   async function fetchMyVote(){
