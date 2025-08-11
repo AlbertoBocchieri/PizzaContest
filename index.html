@@ -325,12 +325,12 @@ function renderCards(){
         return text + '…';
       }
       const y = m.t + i * (barH + gap);
-      ctx.fillStyle = '#e6f3ff'; ctx.fillText(d.name, 12, y + barH/2);
+      ctx.fillStyle = '#e6f3ff'; ctx.fillText(truncateText(ctx, d.name, m.l - 20), 12, y + barH/2);
       ctx.fillStyle = 'rgba(255,255,255,.12)'; ctx.fillRect(m.l, y, width - m.l - m.r, barH);
       const grad = ctx.createLinearGradient(m.l, y, x(d.votes), y);
       grad.addColorStop(0,'#00D2FF'); grad.addColorStop(0.5,'#2ED8B6'); grad.addColorStop(1,'#FFD93D');
       ctx.fillStyle = grad; ctx.fillRect(m.l, y, Math.max(2, x(d.votes)-m.l), barH);
-      ctx.fillStyle = '#fff'; ctx.font = 'bold 14px Poppins, sans-serif'; ctx.fillText(truncateText(ctx, d.name, m.l - 20), 12, y + barH/2);
+      ctx.fillStyle = '#fff'; ctx.font = 'bold 14px Poppins, sans-serif'; ctx.fillText(String(d.votes), x(d.votes)+8, y + barH/2);
     });
   }
 
