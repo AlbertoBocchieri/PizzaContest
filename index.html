@@ -373,7 +373,7 @@ function renderCards(){
   window.addEventListener('scroll', () => document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 10));
 
   // COUNTDOWN (blocco voto allo scadere) — mezzanotte locale
-  const target = new Date('2025-08-10T00:00:00+02:00').getTime();
+  const target = new Date('2025-08-15T21:00:00+02:00').getTime();
   function format2(n){return String(n).padStart(2,'0')}
   function tick(){
     const now = Date.now();
