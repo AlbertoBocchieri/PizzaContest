@@ -258,7 +258,6 @@
     const ENTRIES = [
       { id:'margherita', name:'Margherita Classica', img:'./img/margherita.jpg', desc:'', c1:'Giuseppe', c2:'Alessio' },
       { id:'norma', name:'Norma', img:'./img/norma.jpg', desc:'', c1:'Giuseppe', c2:'Alessio' },
-      { id:'pistacchio', name:'Pistacchio', img:'./img/pistacchio.jpg', desc:'', c1:'Giuseppe', c2:'Alessio' },
       { id:'patapizza', name:'Patapizza', img:'./img/patapizza.jpg', desc:'', c1:'Giuseppe', c2:'Alessio' },
       { id:'crudo_parmigiano_rucola', name:'Crudo, parmigiano e rucola', img:'./img/crudo_parmigiano_rucola.jpg', desc:'', c1:'Giuseppe', c2:'Alessio' }
     ];
@@ -597,7 +596,7 @@ ENTRIES.forEach(entry => {
     );
 
     // Countdown: blocca il voto alla scadenza (ora locale IT)
-    const target = new Date('2025-08-15T23:59:59+02:00').getTime();
+    const target = new Date('2025-08-15T22:30:00+02:00').getTime();
     function pad2(n){return String(n).padStart(2,'0')}
     function tick(){
       const now = Date.now();
