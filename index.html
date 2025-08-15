@@ -596,7 +596,7 @@ ENTRIES.forEach(entry => {
     );
 
     // Countdown: blocca il voto alla scadenza (ora locale IT)
-    const target = new Date('2025-08-15T22:30:00+02:00').getTime();
+    const target = new Date('2025-08-15T23:59:59+02:00').getTime();
     function pad2(n){return String(n).padStart(2,'0')}
     function tick(){
       const now = Date.now();
