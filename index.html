@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="it">
+<!DOCTYPE html>
+<html lang="it">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -41,8 +42,6 @@ section{padding:5rem 0;position:relative}.section-title{text-align:center;font-s
 .pill{display:inline-block;padding:.25rem .6rem;border-radius:999px;font-size:.75rem;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25)}
 .badge-mine{position:absolute;top:12px;left:12px;background:linear-gradient(135deg,#FFD93D,#FF6B9D);color:#111;padding:.25rem .5rem;border-radius:999px;font-weight:700;box-shadow:0 6px 22px rgba(0,0,0,.25)}
 .gallery-img{border-radius:16px;overflow:hidden}
-#votesInfo,
-#deviceInfo {display: none !important;}
 /* Pizzaioli */
 .chef-card{text-align:center;transition:var(--transition)}
 .chef-card:hover{transform:translateY(-6px)}
@@ -52,6 +51,8 @@ section{padding:5rem 0;position:relative}.section-title{text-align:center;font-s
 #resultsCanvas{width:100%;max-width:900px;height:360px}
 .footer{background:linear-gradient(135deg,rgba(30,60,114,.9) 0,rgba(0,0,0,.9) 100%);padding:3rem 0 2rem;border-top:2px solid rgba(255,217,61,.3)}
 .section-title code{color:#FFD93D}
+/* Nascondi riquadri Voti totali e Utente */
+#votesInfo,#deviceInfo{display:none!important}
 @keyframes bounce{0%,20%,50%,80%,100%{transform:translateY(0)}40%{transform:translateY(-10px)}60%{transform:translateY(-5px)}}
   </style>
 </head>
@@ -69,12 +70,14 @@ section{padding:5rem 0;position:relative}.section-title{text-align:center;font-s
         </ul>
       </div>
     </div>
-  </nav>  <header class="hero">
+  </nav>
+
+  <header class="hero">
     <div class="container">
       <div class="hero-content">
         <h1 class="hero-title">Ferragosto Pizza Contest 2025</h1>
         <p class="hero-subtitle">Vota la pizza più buona 🔥🍕</p>
-        <p class="hero-description">Voto unico per utente (anonimo). Puoi <strong>cambiare voto</strong> fino alla scadenza.</p>
+        <p class="hero-description">Voto unico per utente (anonimo), classifica live multi-dispositivo. Puoi <strong>cambiare voto</strong> fino alla scadenza.</p>
         <div class="countdown mb-3" id="countdown"></div>
         <div>
           <span class="hero-date"><i class="bi bi-calendar-event"></i> 15 Agosto 2025</span>
@@ -83,13 +86,16 @@ section{padding:5rem 0;position:relative}.section-title{text-align:center;font-s
         <a href="#vota" class="btn-hero">Vai al voto</a>
       </div>
     </div>
-  </header>  <!-- PIZZAIOLI -->  <section id="pizzaioli">
+  </header>
+
+  <!-- PIZZAIOLI -->
+  <section id="pizzaioli">
     <div class="container">
       <h2 class="section-title">I pizzaioli</h2>
       <div class="row g-4">
         <div class="col-12 col-md-6 col-lg-3">
           <div class="dark-card chef-card h-100">
-            <div class="chef-img"><img src="./img/pizzaioli/giuseppe.jpg" alt="Mario Rossi" loading="lazy"></div>
+            <div class="chef-img"><img src="./img/pizzaioli/giuseppe.jpg" alt="Giuseppe" loading="lazy"></div>
             <h5 class="mb-1">Giuseppe</h5>
             <small class="text-info">Impasti a lunga maturazione</small>
             <p class="mt-2 text-light">Appassionato di biga e prefermenti, ama la margherita tradizionale con pomodoro San Marzano.</p>
@@ -97,22 +103,26 @@ section{padding:5rem 0;position:relative}.section-title{text-align:center;font-s
         </div>
         <div class="col-12 col-md-6 col-lg-3">
           <div class="dark-card chef-card h-100">
-            <div class="chef-img"><img src="./img/pizzaioli/AlessioL.jpeg" alt="Giulia Bianchi" loading="lazy"></div>
+            <div class="chef-img"><img src="./img/pizzaioli/AlessioL.jpeg" alt="Alessio" loading="lazy"></div>
             <h5 class="mb-1">Alessio</h5>
             <small class="text-info">Creatività & topping di stagione</small>
-            <p class="mt-2 text-light">Laureato in Scienze delle Merendine. Esperto in impasti innovativi e creazioni culinarie che uniscono tradizione e fantasia per un'esperienza gastronomica unica.</p>
+            <p class="mt-2 text-light">Sperimenta impasti innovativi e topping di stagione per pizze leggere e gustose.</p>
           </div>
         </div>
       </div>
     </div>
-  </section>  <section id="vota">
+  </section>
+
+  <section id="vota">
     <div class="container">
       <h2 class="section-title">I concorrenti</h2>
       <div id="cards" class="row g-4"></div>
+
       <div class="text-center mt-4">
         <span class="pill" id="votesInfo">Voti totali: 0</span>
         <span class="pill ms-2" id="deviceInfo">Stato: non autenticato</span>
       </div>
+
       <div id="adminTools" class="dark-card mt-5 d-none">
         <h5 class="mb-3"><i class="bi bi-shield-lock"></i> Pannello Organizzatore</h5>
         <div class="d-flex flex-wrap gap-2">
@@ -123,25 +133,34 @@ section{padding:5rem 0;position:relative}.section-title{text-align:center;font-s
         </div>
       </div>
     </div>
-  </section>  <section id="classifica">
+  </section>
+
+  <section id="classifica">
     <div class="container">
       <h2 class="section-title">Classifica live</h2>
       <div class="dark-card d-flex flex-column align-items-center">
         <canvas id="resultsCanvas"></canvas>
       </div>
     </div>
-  </section>  <footer class="footer">
+  </section>
+
+  <footer class="footer">
     <div class="container text-center">
       <p class="mb-1">Made with 🍕 e tanto amore. Ferragosto 2025.</p>
     </div>
-  </footer>  <div id="debugStatus" class="alert alert-danger d-none" role="alert" style="position:fixed;left:50%;transform:translateX(-50%);bottom:16px;z-index:2000;max-width:92vw"></div>  <script type="module">
+  </footer>
+
+  <div id="debugStatus" class="alert alert-danger d-none" role="alert" style="position:fixed;left:50%;transform:translateX(-50%);bottom:16px;z-index:2000;max-width:92vw"></div>
+
+  <script type="module">
   // === DATA (immagini dalla repo ./img/<id>.jpg) ===
+  // c1/c2 = nomi dei due pizzaioli per ogni pizza
   const ENTRIES = [
-    { id: 'margherita', name: 'Margherita Classica', author: '', img: './img/margherita.jpg', desc: ''},
-    { id: 'norma', name: 'Norma', author: '', img: './img/norma.jpg', desc: ''},
-    { id: 'pistacchio', name: 'Pistacchio', author: '', img: './img/pistacchio.jpg', desc: ''},
-    { id: 'patapizza', name: 'Patapizza', author: '', img: './img/patapizza.jpg', desc: ''},
-    { id: 'crudo_parmigiano_rucola', name: 'Crudo, parmigiano e rucola', author: '', img: './img/crudo_parmigiano_rucola.jpg', desc: ''}
+    { id: 'margherita', name: 'Margherita Classica', img: './img/margherita.jpg', desc: '', c1: 'Giuseppe', c2: 'Alessio' },
+    { id: 'norma', name: 'Norma', img: './img/norma.jpg', desc: '', c1: 'Giuseppe', c2: 'Alessio' },
+    { id: 'pistacchio', name: 'Pistacchio', img: './img/pistacchio.jpg', desc: '', c1: 'Giuseppe', c2: 'Alessio' },
+    { id: 'patapizza', name: 'Patapizza', img: './img/patapizza.jpg', desc: '', c1: 'Giuseppe', c2: 'Alessio' },
+    { id: 'crudo_parmigiano_rucola', name: 'Crudo, parmigiano e rucola', img: './img/crudo_parmigiano_rucola.jpg', desc: '', c1: 'Giuseppe', c2: 'Alessio' }
   ];
 
   // === Firebase SDK (modular) ===
@@ -150,7 +169,16 @@ section{padding:5rem 0;position:relative}.section-title{text-align:center;font-s
   import { getAnalytics } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js';
   import { getFirestore, collection, doc, setDoc, getDoc, onSnapshot, serverTimestamp } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js';
 
-  const firebaseConfig = { apiKey:"AIzaSyCuPSHBGhypBqboK54Dpi0UlFipBmzbaP0", authDomain:"pizza-contest.firebaseapp.com", databaseURL:"https://pizza-contest-default-rtdb.europe-west1.firebasedatabase.app", projectId:"pizza-contest", storageBucket:"pizza-contest.firebasestorage.app", messagingSenderId:"76144886476", appId:"1:76144886476:web:fd87ceafa108fe4e6cf869", measurementId:"G-Q9FMW6YVBF" };
+  const firebaseConfig = {
+    apiKey:"AIzaSyCuPSHBGhypBqboK54Dpi0UlFipBmzbaP0",
+    authDomain:"pizza-contest.firebaseapp.com",
+    databaseURL:"https://pizza-contest-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId:"pizza-contest",
+    storageBucket:"pizza-contest.firebasestorage.app",
+    messagingSenderId:"76144886476",
+    appId:"1:76144886476:web:fd87ceafa108fe4e6cf869",
+    measurementId:"G-Q9FMW6YVBF"
+  };
 
   function showStatus(msg, type='danger'){
     const el = document.getElementById('debugStatus');
@@ -191,13 +219,14 @@ section{padding:5rem 0;position:relative}.section-title{text-align:center;font-s
   // Stato
   let currentUser = null;
   let votesCache = [];
-  let myVote = null;
+  let myVote = null; // { entryId: string, chef: 'c1'|'c2' }
   let votingClosed = false;
 
   // Auth anonima
   signInAnonymously(auth).catch(e=>{ console.error('Auth error', e); showStatus('Auth anonima fallita: ' + (e?.message||e)); });
   onAuthStateChanged(auth, async (user) => {
     currentUser = user;
+    // resta nascosto via CSS, ma lo aggiorniamo comunque:
     document.getElementById('deviceInfo').textContent = user ? `Utente: ${user.uid.slice(0,8)}…` : 'Stato: non autenticato';
     await fetchMyVote();
     initAdmin();
@@ -208,17 +237,22 @@ section{padding:5rem 0;position:relative}.section-title{text-align:center;font-s
   async function fetchMyVote(){
     if(!currentUser) return;
     const snap = await getDoc(doc(db, `contests/${CONTEST_ID}/votes/${currentUser.uid}`));
-    myVote = snap.exists()? (snap.data().entryId || null) : null;
+    if (snap.exists()) {
+      const d = snap.data();
+      myVote = { entryId: d.entryId || null, chef: d.chef === 'c2' ? 'c2' : 'c1' };
+    } else {
+      myVote = null;
+    }
   }
 
   // Voto (con cambio) blocco se scaduto
-  async function vote(entryId){
+  async function vote(entryId, chef){
     if (votingClosed) { showStatus('⛔ Votazioni chiuse.', 'warning'); return; }
     if(!currentUser){ showStatus('Auth in corso, riprova…','warning'); return; }
-    const changing = myVote && myVote !== entryId;
+    const changing = myVote && (myVote.entryId !== entryId || myVote.chef !== chef);
     try{
-      await setDoc(doc(db, `contests/${CONTEST_ID}/votes/${currentUser.uid}`), { entryId, ts: serverTimestamp(), ua: navigator.userAgent }, { merge: true });
-      myVote = entryId;
+      await setDoc(doc(db, `contests/${CONTEST_ID}/votes/${currentUser.uid}`), { entryId, chef, ts: serverTimestamp(), ua: navigator.userAgent }, { merge: true });
+      myVote = { entryId, chef };
       renderCards();
       confetti();
       showStatus(changing ? '✅ Voto aggiornato!' : '✅ Voto registrato!', 'success');
@@ -240,43 +274,50 @@ section{padding:5rem 0;position:relative}.section-title{text-align:center;font-s
 
   // Tally
   function tallyCounts(){
-    const counts = Object.fromEntries(ENTRIES.map(e=>[e.id,0]));
-    for(const v of votesCache){ if(v.entryId && counts[v.entryId] !== undefined) counts[v.entryId]++; }
+    const counts = Object.fromEntries(ENTRIES.map(e=>[e.id,{c1:0,c2:0,total:0}]));
+    for(const v of votesCache){
+      if(!v.entryId || !counts[v.entryId]) continue;
+      const chef = v.chef === 'c2' ? 'c2' : 'c1'; // retrocompat: default c1
+      counts[v.entryId][chef]++;
+      counts[v.entryId].total++;
+    }
     return counts;
   }
   function rankingData(){
     const counts = tallyCounts();
-    const data = ENTRIES.map(e => ({...e, votes: counts[e.id]||0}));
+    const data = ENTRIES.map(e => ({...e, votesC1: counts[e.id]?.c1||0, votesC2: counts[e.id]?.c2||0, votes: counts[e.id]?.total||0}));
     data.sort((a,b)=> b.votes - a.votes || a.name.localeCompare(b.name));
     return data;
   }
 
 // RENDER
-function renderCards(){
+  function renderCards(){
     const wrap = document.getElementById('cards');
     const counts = tallyCounts();
     wrap.innerHTML='';
     ENTRIES.forEach(entry => {
+      const c = counts[entry.id] || {c1:0,c2:0,total:0};
       const col = document.createElement('div');
       col.className = 'col-12 col-sm-6 col-lg-3 position-relative';
-      const isMine = myVote === entry.id;
-      const btnLabel = votingClosed ? '<i class="bi bi-lock"></i> Voto chiuso' : (isMine?'<i class="bi bi-arrow-repeat"></i> Cambia voto':'<i class="bi bi-hand-thumbs-up"></i> Vota');
-      const btnDisabledAttr = votingClosed ? 'disabled' : '';
+      const mine = myVote && myVote.entryId === entry.id ? myVote.chef : null;
+      const disabled = votingClosed ? 'disabled' : '';
       col.innerHTML = `
         <div class="dark-card pizza-card h-100">
           <div class="pizza-img"><img src="${entry.img}" alt="${entry.name}" loading="lazy"></div>
-          ${isMine ? '<div class="badge-mine"><i class="bi bi-heart-fill"></i> Il tuo voto</div>' : ''}
+          ${mine ? '<div class="badge-mine"><i class="bi bi-heart-fill"></i> Il tuo voto</div>' : ''}
           <h5 class="mb-1">${entry.name}</h5>
-          <small class="text-info">${entry.author}</small>
-          <p class="mt-2 mb-3 text-light">${entry.desc}</p>
-          <div class="d-flex align-items-center justify-content-between mt-auto">
-            <button class="vote-btn ${isMine ? 'active' : ''}" data-id="${entry.id}" ${btnDisabledAttr}>${btnLabel}</button>
-            <span class="pill"><i class="bi bi-people"></i> <span>${counts[entry.id]||0}</span></span>
+          <div class="d-grid gap-2 my-2">
+            <button class="vote-btn ${mine==='c1'?'active':''}" data-id="${entry.id}" data-chef="c1" ${disabled}><i class="bi bi-hand-thumbs-up"></i> ${entry.c1}</button>
+            <button class="vote-btn ${mine==='c2'?'active':''}" data-id="${entry.id}" data-chef="c2" ${disabled}><i class="bi bi-hand-thumbs-up"></i> ${entry.c2}</button>
+          </div>
+          <div class="d-flex justify-content-between align-items-center mt-auto">
+            <span class="pill"><i class="bi bi-people me-1"></i>${c.c1} • ${c.c2}</span>
+            <span class="pill">Tot: <strong>${c.total}</strong></span>
           </div>
         </div>`;
       wrap.appendChild(col);
     });
-    wrap.querySelectorAll('.vote-btn').forEach(btn => btn.addEventListener('click', () => vote(btn.getAttribute('data-id'))));
+    wrap.querySelectorAll('.vote-btn').forEach(btn => btn.addEventListener('click', () => vote(btn.getAttribute('data-id'), btn.getAttribute('data-chef'))));
   }
 
   function renderChart(data){
@@ -289,28 +330,64 @@ function renderCards(){
     canvas.width = width * dpr; canvas.height = height * dpr;
     ctx.setTransform(dpr,0,0,dpr,0,0);
     ctx.clearRect(0,0,width,height);
-    const m = {l: 120, r: 24, t: 22, b: 40};
+    const m = {l: 150, r: 28, t: 28, b: 40};
     const gap = 12;
-    const dataLen = Math.max(1, data.length);
-    const barH = Math.max(24, Math.min(48, (height - m.t - m.b - gap*(dataLen-1)) / dataLen));
+    const n = Math.max(1, data.length);
+    const barH = Math.max(24, Math.min(48, (height - m.t - m.b - gap*(n-1)) / n));
     const maxV = Math.max(1, ...data.map(d => d.votes));
     const x = v => m.l + (v / maxV) * (width - m.l - m.r);
-    ctx.font = '14px Poppins, sans-serif'; ctx.textBaseline = 'middle';
+
+    function truncateText(ctx, text, maxWidth) {
+      ctx.font = '14px Poppins, sans-serif';
+      if (ctx.measureText(text).width <= maxWidth) return text;
+      while (ctx.measureText(text + '…').width > maxWidth && text.length > 0) text = text.slice(0, -1);
+      return text + '…';
+    }
+
+    // Legend globale (usa i nomi dalla prima entry)
+    const legC1 = data[0]?.c1 || 'C1';
+    const legC2 = data[0]?.c2 || 'C2';
+    ctx.font = '12px Poppins, sans-serif';
+    ctx.fillStyle = '#e6f3ff';
+    ctx.fillText('Legenda:', m.l, 16);
+    ctx.fillStyle = '#00D2FF'; ctx.fillRect(m.l+62, 8, 12, 12);
+    ctx.fillStyle = '#e6f3ff'; ctx.fillText(legC1, m.l+80, 18);
+    ctx.fillStyle = '#FF6B9D'; ctx.fillRect(m.l+150, 8, 12, 12);
+    ctx.fillStyle = '#e6f3ff'; ctx.fillText(legC2, m.l+168, 18);
+
     data.forEach((d,i)=>{
-      function truncateText(ctx, text, maxWidth) {
-        if (ctx.measureText(text).width <= maxWidth) return text;
-        while (ctx.measureText(text + '…').width > maxWidth && text.length > 0) {
-          text = text.slice(0, -1);
-        }
-        return text + '…';
-      }
       const y = m.t + i * (barH + gap);
-      ctx.fillStyle = '#e6f3ff'; ctx.fillText(truncateText(ctx, d.name, m.l - 20), 12, y + barH/2);
-      ctx.fillStyle = 'rgba(255,255,255,.12)'; ctx.fillRect(m.l, y, width - m.l - m.r, barH);
-      const grad = ctx.createLinearGradient(m.l, y, x(d.votes), y);
-      grad.addColorStop(0,'#00D2FF'); grad.addColorStop(0.5,'#2ED8B6'); grad.addColorStop(1,'#FFD93D');
-      ctx.fillStyle = grad; ctx.fillRect(m.l, y, Math.max(2, x(d.votes)-m.l), barH);
-      ctx.fillStyle = '#fff'; ctx.font = 'bold 14px Poppins, sans-serif'; ctx.fillText(String(d.votes), x(d.votes)+8, y + barH/2);
+      // label
+      ctx.font = '14px Poppins, sans-serif';
+      ctx.fillStyle = '#e6f3ff';
+      const label = truncateText(ctx, d.name, m.l - 20);
+      ctx.fillText(label, 12, y + barH/2);
+
+      // background barra
+      ctx.fillStyle = 'rgba(255,255,255,.12)';
+      ctx.fillRect(m.l, y, width - m.l - m.r, barH);
+
+      // stacked: c1 poi c2
+      const x1 = x(d.votesC1);
+      const x2 = x(d.votesC1 + d.votesC2);
+
+      let grad1 = ctx.createLinearGradient(m.l, y, x1, y);
+      grad1.addColorStop(0,'#00D2FF'); grad1.addColorStop(1,'#2ED8B6');
+      ctx.fillStyle = grad1; ctx.fillRect(m.l, y, Math.max(0, x1 - m.l), barH);
+
+      let grad2 = ctx.createLinearGradient(x1, y, x2, y);
+      grad2.addColorStop(0,'#FF6B9D'); grad2.addColorStop(1,'#FFD93D');
+      ctx.fillStyle = grad2; ctx.fillRect(x1, y, Math.max(0, x2 - x1), barH);
+
+      // valori e “leader”
+      ctx.font = 'bold 13px Poppins, sans-serif';
+      ctx.fillStyle = '#fff';
+      ctx.fillText(`${d.votesC1} vs ${d.votesC2}`, x(d.votes)+8, y + barH/2);
+
+      const winner = d.votesC1 === d.votesC2 ? 'Parità' : (d.votesC1 > d.votesC2 ? d.c1 : d.c2);
+      ctx.font = '12px Poppins, sans-serif';
+      ctx.fillStyle = d.votesC1 === d.votesC2 ? '#e6f3ff' : (d.votesC1 > d.votesC2 ? '#00E5FF' : '#FF9BC0');
+      ctx.fillText(`→ ${winner} in vantaggio`, m.l + 6, y - 4);
     });
   }
 
@@ -322,7 +399,8 @@ function renderCards(){
 
   function renderMeta(){
     const total = votesCache.length;
-    document.getElementById('votesInfo').textContent = `Voti totali: ${total}`;
+    const el = document.getElementById('votesInfo');
+    if (el) el.textContent = `Voti totali: ${total}`;
   }
 
   function renderAll(){
@@ -343,8 +421,10 @@ function renderCards(){
     const testBtn = document.getElementById('btnTestWrite');
     if(testBtn) testBtn.addEventListener('click', async ()=>{
       if(!currentUser){ showStatus('Auth non pronta, riprova…', 'warning'); return; }
-      try{ await setDoc(doc(db, `contests/${CONTEST_ID}/votes/${currentUser.uid}`), { entryId: 'TEST', ts: serverTimestamp(), ua: 'admin-test' }, { merge: true }); showStatus('✅ Test write OK. Controlla Firestore.', 'success'); }
-      catch(e){ console.error(e); showStatus('❌ Test write fallita: ' + (e?.message||e)); }
+      try{
+        await setDoc(doc(db, `contests/${CONTEST_ID}/votes/${currentUser.uid}`), { entryId: 'TEST', chef: 'c1', ts: serverTimestamp(), ua: 'admin-test' }, { merge: true });
+        showStatus('✅ Test write OK. Controlla Firestore.', 'success');
+      } catch(e){ console.error(e); showStatus('❌ Test write fallita: ' + (e?.message||e)); }
     });
     const exCsv = document.getElementById('btnExportCsv');
     if(exCsv) exCsv.addEventListener('click', async ()=> exportVotes('csv'));
@@ -353,12 +433,12 @@ function renderCards(){
   }
 
   async function exportVotes(kind='csv'){
-    const rows = votesCache.map(v => [v.id, v.entryId || '', (v.ts && v.ts.toDate ? v.ts.toDate().toISOString() : ''), v.ua || '']);
+    const rows = votesCache.map(v => [v.id, v.entryId || '', v.chef || '', (v.ts && v.ts.toDate ? v.ts.toDate().toISOString() : ''), v.ua || '']);
     if(kind==='json'){
-      const blob = new Blob([JSON.stringify(rows.map(r=>({uid:r[0], entryId:r[1], ts:r[2], ua:r[3]})), null, 2)], {type:'application/json'});
+      const blob = new Blob([JSON.stringify(rows.map(r=>({uid:r[0], entryId:r[1], chef:r[2], ts:r[3], ua:r[4]})), null, 2)], {type:'application/json'});
       const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'pizza_votes.json'; a.click();
     } else {
-      const csv = [['uid','entryId','timestamp','ua'], ...rows].map(r=>r.map(x=>'"'+String(x).replaceAll('"','""')+'"').join(',')).join('');
+      const csv = [['uid','entryId','chef','timestamp','ua'], ...rows].map(r=>r.map(x=>'"'+String(x).replaceAll('"','""')+'"').join(',')).join('\n');
       const blob = new Blob([csv], {type:'text/csv;charset=utf-8;'});
       const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'pizza_votes.csv'; a.click();
     }
@@ -367,8 +447,8 @@ function renderCards(){
   // Navbar effetto
   window.addEventListener('scroll', () => document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 10));
 
-  // COUNTDOWN (blocco voto allo scadere) — mezzanotte locale
-  const target = new Date('2025-08-15T21:00:00+02:00').getTime();
+  // COUNTDOWN (blocco voto allo scadere) — modifica la data/ora a piacere
+  const target = new Date('2025-08-15T23:00:00+02:00').getTime();
   function format2(n){return String(n).padStart(2,'0')}
   function tick(){
     const now = Date.now();
@@ -384,7 +464,7 @@ function renderCards(){
     const hrs = Math.floor((s%86400)/3600);
     const mins = Math.floor((s%3600)/60);
     const secs = s%60;
-    document.getElementById('countdown').innerHTML = 
+    document.getElementById('countdown').innerHTML =
       `<div class="cd"><strong>${days}</strong><div>giorni</div></div>`+
       `<div class="cd"><strong>${format2(hrs)}</strong><div>ore</div></div>`+
       `<div class="cd"><strong>${format2(mins)}</strong><div>min</div></div>`+
